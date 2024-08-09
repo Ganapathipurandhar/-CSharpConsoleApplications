@@ -1,0 +1,8 @@
+C:\Users\Aboobaker\source\repos\PRG521_FA2_Question1\PRG521_FA2_Question1\obj\Debug\PRG521_FA2_Question1.csproj.AssemblyReference.cache
+C:\Users\Aboobaker\source\repos\PRG521_FA2_Question1\PRG521_FA2_Question1\obj\Debug\PRG521_FA2_Question1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aboobaker\source\repos\PRG521_FA2_Question1\PRG521_FA2_Question1\obj\Debug\PRG521_FA2_Question1.csproj.CoreCompileInputs.cache
+C:\Users\Aboobaker\source\repos\PRG521_FA2_Question1\PRG521_FA2_Question1\bin\Debug\PRG521_FA2_Question1.exe.config
+C:\Users\Aboobaker\source\repos\PRG521_FA2_Question1\PRG521_FA2_Question1\bin\Debug\PRG521_FA2_Question1.exe
+C:\Users\Aboobaker\source\repos\PRG521_FA2_Question1\PRG521_FA2_Question1\bin\Debug\PRG521_FA2_Question1.pdb
+C:\Users\Aboobaker\source\repos\PRG521_FA2_Question1\PRG521_FA2_Question1\obj\Debug\PRG521_FA2_Question1.exe
+C:\Users\Aboobaker\source\repos\PRG521_FA2_Question1\PRG521_FA2_Question1\obj\Debug\PRG521_FA2_Question1.pdb
