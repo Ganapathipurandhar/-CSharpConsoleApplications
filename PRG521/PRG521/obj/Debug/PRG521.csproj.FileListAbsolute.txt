@@ -1,0 +1,15 @@
+C:\Users\Aboobaker\source\repos\PRG521\PRG521\bin\Debug\PRG521.exe.config
+C:\Users\Aboobaker\source\repos\PRG521\PRG521\bin\Debug\PRG521.exe
+C:\Users\Aboobaker\source\repos\PRG521\PRG521\bin\Debug\PRG521.pdb
+C:\Users\Aboobaker\source\repos\PRG521\PRG521\obj\Debug\PRG521.csproj.AssemblyReference.cache
+C:\Users\Aboobaker\source\repos\PRG521\PRG521\obj\Debug\PRG521.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aboobaker\source\repos\PRG521\PRG521\obj\Debug\PRG521.csproj.CoreCompileInputs.cache
+C:\Users\Aboobaker\source\repos\PRG521\PRG521\obj\Debug\PRG521.exe
+C:\Users\Aboobaker\source\repos\PRG521\PRG521\obj\Debug\PRG521.pdb
+C:\Users\Aboobaker\Documents\Aboobaker Banoo\Software Development\Semister 1\PGR512 - Programming with C#\Submission\Aboobaker_Banoo_20230228 - PRG521 - FA1\PRG521\PRG521\bin\Debug\PRG521.exe.config
+C:\Users\Aboobaker\Documents\Aboobaker Banoo\Software Development\Semister 1\PGR512 - Programming with C#\Submission\Aboobaker_Banoo_20230228 - PRG521 - FA1\PRG521\PRG521\bin\Debug\PRG521.exe
+C:\Users\Aboobaker\Documents\Aboobaker Banoo\Software Development\Semister 1\PGR512 - Programming with C#\Submission\Aboobaker_Banoo_20230228 - PRG521 - FA1\PRG521\PRG521\bin\Debug\PRG521.pdb
+C:\Users\Aboobaker\Documents\Aboobaker Banoo\Software Development\Semister 1\PGR512 - Programming with C#\Submission\Aboobaker_Banoo_20230228 - PRG521 - FA1\PRG521\PRG521\obj\Debug\PRG521.csproj.AssemblyReference.cache
+C:\Users\Aboobaker\Documents\Aboobaker Banoo\Software Development\Semister 1\PGR512 - Programming with C#\Submission\Aboobaker_Banoo_20230228 - PRG521 - FA1\PRG521\PRG521\obj\Debug\PRG521.csproj.CoreCompileInputs.cache
+C:\Users\Aboobaker\Documents\Aboobaker Banoo\Software Development\Semister 1\PGR512 - Programming with C#\Submission\Aboobaker_Banoo_20230228 - PRG521 - FA1\PRG521\PRG521\obj\Debug\PRG521.exe
+C:\Users\Aboobaker\Documents\Aboobaker Banoo\Software Development\Semister 1\PGR512 - Programming with C#\Submission\Aboobaker_Banoo_20230228 - PRG521 - FA1\PRG521\PRG521\obj\Debug\PRG521.pdb
