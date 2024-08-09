@@ -1,0 +1,6 @@
+Amount: R100, Tax: 2%, Total: R102,00, Date: 2023/05/19 Time: 19:14:13
+
+Amount: R1600, Tax: 4%, Total: R1664,00, Date: 2023/05/19 Time: 19:14:56
+
+Amount: R4200, Tax: 8%, Total: R4536,00, Date: 2023/05/19 Time: 19:15:49
+

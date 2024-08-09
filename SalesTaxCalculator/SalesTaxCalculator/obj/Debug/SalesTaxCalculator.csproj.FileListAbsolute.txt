@@ -1,0 +1,12 @@
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\bin\Debug\SalesTaxCalculator.exe.config
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\bin\Debug\SalesTaxCalculator.exe
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\bin\Debug\SalesTaxCalculator.pdb
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\obj\Debug\SalesTaxCalculator.csproj.AssemblyReference.cache
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\obj\Debug\SalesTaxCalculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\obj\Debug\SalesTaxCalculator.Properties.Resources.resources
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\obj\Debug\SalesTaxCalculator.csproj.GenerateResource.cache
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\obj\Debug\SalesTaxCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\obj\Debug\SalesTaxCalculator.exe
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\obj\Debug\SalesTaxCalculator.pdb
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\obj\Debug\SalesTaxCalculator.Form1.resources
+C:\Users\Aboobaker\source\repos\SalesTaxCalculator\SalesTaxCalculator\obj\Debug\SalesTaxCalculator.DisplayResultForm.resources

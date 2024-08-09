@@ -1,0 +1,8 @@
+Invalid input exception occurred. Date: 2023/05/19 Time: 19:12:09
+
+Invalid input exception occurred. Date: 2023/05/19 Time: 19:12:38
+
+Empty input exception occurred. Date: 2023/05/19 Time: 19:12:59
+
+Invalid input exception occurred. Date: 2023/05/19 Time: 19:13:58
+
