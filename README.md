@@ -129,23 +129,73 @@ Write a LINQ query that retrieves the names of all the students who have at leas
                 .OrderByDescending(s => s.Grades.Average())
                 .First();`
 
-
 <img src="assets/images/LINQ4.png" alt="LINQ query image 4">
 
 
 
 ## PRG521_FA4_PasswordGenerator - (Password Generator)
 ### Overview
+A company has hired you to develop an application to generate passwords for their employees’ accounts. The application prompts the user to provide one single line of text with an employee’s full name in the following format “forename surname” at a time. (Please note that you are not required to validate the input, we assume that the input is well-formed.) Next, the application uses the given full name to create the corresponding item.  Note that the application should work irrespective of how the user provides the full name i.e. using upper-case letters, lower-case letters, or a combination of both upper-case and lower-case letters. You should use the full name as provided i.e. you should not modify the given full name to a different letter case. 
+
+
+The password is created using the following rules:  
+- The letters ‘a’, ’e’, and ‘t’ from the given full name will not be used in the password  
+- Each vowel (except ‘a’ and ‘e’ which are eliminated) is going to be added twice  
+- Each space is replaced by the letter ‘S’ followed by a ‘&’ and a ‘?’  
+- All the other characters will remain the same as in the given full name  
+- The password ends with the total number of letters eliminated (i.e. the total number of letters ‘a’, ’e’, and ‘t’ from the given full name that were not used in the password)  
 
 ### Demonstrating functionality
+<img src="assets/images/PG1.png" alt="Password Generator image 1">
 
 
 
 ## SalesTaxCalculator
+
 ### Overview
+Create a Windows application that calculates sales tax for a given amount. The user can enter an amount in a text box and then can enter a sales tax between 0 and 25%, in increments of 1%. When the user clicks the Submit button, the tax is calculated, and both the tax and the total are output in a label. The application should look something like the Figure below when it runs. Display your Amounts in Rands. The amount is entered in a Textbox control, but for the tax, you want to restrict the values the user can enter, so you should use a numericUpDown control. There’s a Clear button that clears the “Amount” TextBox when clicked. Implement some exception handling to ensure that the user enters a number in the TextBox. You should include the following in your program  
 
 ### Demonstrating functionality
+Exception handling should be used to prevent users from entering invalid input (text, character...) (try, catch, and finally)
+<br> a. Exception handling for when a user inputs text: 
+<br> <img src="assets/images/ST1.png" alt="Sales Tax image 1">
 
+
+b. Exception handling for when the user inputs a character: 
+<br> <img src="assets/images/ST2.png" alt="Sales Tax image 2">
+
+
+All exception messages should be displayed using a message box and saved in a text file called Exceptionfile.txt
+<br> a. Additional error handling for when the user does not input any value: 
+<br> <img src="assets/images/ST3.png" alt="Sales Tax image 3">
+
+b. Additional error handling for when the user inputs a negative value: 
+<br> <img src="assets/images/ST4.png" alt="Sales Tax image 4">
+
+
+All results should be saved in a file called TaxCalculation.txt. The result should be saved once the Submit button is pressed
+<br> a. First entry: 
+<br> <img src="assets/images/ST4.png" alt="Sales Tax image 5">
+
+b. Second entry: 
+<br> <img src="assets/images/ST6.png" alt="Sales Tax image 6">
+
+c. Third entry: 
+<br> <img src="assets/images/ST7.png" alt="Sales Tax image 7">
+
+
+Meaning your program will have two separate text files one to record all exceptions thrown – message and the other to record all tax calculations and the date and time the operation occurred
+<br> a. ExceptionFile.txt: 
+<br> <img src="assets/images/ST8.png" alt="Sales Tax image 8">
+
+b. TaxCalculation.txt: 
+<br> <img src="assets/images/ST9.png" alt="Sales Tax image 9">
+
+c. Additionally, the Clear button: 
+<br> <img src="assets/images/ST10.png" alt="Sales Tax image 10">
+
+d. The Clear button clears the Amount textbox: 
+<br> <img src="assets/images/ST11.png" alt="Sales Tax image 11">
 
 
 ## SchoolManagementSystem
