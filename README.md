@@ -70,16 +70,67 @@ Take Note that validation is also built in the entire application.
 
 ## PRG521_FA2_Question1 - (City Finder)
 ### Overview
+Write a program in LINQ and C# Sharp to find the string which starts and ends with a specific character. 
+<br> Tasks to complete: 
+- You are to use an array that will contain 10 South African cities – You are required to use cities provided below: 
+Test data: Butterworth, Mthatha, Jagersfontein, Kroonstad, Boksburg, Soweto, Empangeni, Polokwane, Secunda, Kuruman. 
+- Have a welcome message to your users that will help them know your application 
+- Display all cities available 
+- Prompt the user to enter a starting character for a city 
+- Prompt the user to enter an ending string character for a city 
+- Your output should be based on the starting and ending string character
 
 
 ### Demonstrating functionality
+<img src="assets/images/CF1.png" alt="City Finder image 1">
 
 
 
 ## PRG521_FA2_Question2 - (LINQ Query)
 ### Overview
+You have been provided with lines of codes. Answer the questions based on the line of codes. You are required to recreate it and add your line of code based on the questions below:
 
 ### Demonstrating functionality
+Write a LINQ query that retrieves the names of all the students who have at least one grade greater than or equal to 90:
+
+`var studentNames = courses
+                .SelectMany(c => c.Students)
+                .Where(s => s.Grades.Any(g => g >= 90))
+                .Select(s => s.Name);`
+
+
+<img src="assets/images/LINQ1.png" alt="LINQ query image 1">
+
+<br> Write a LINQ query that calculates the average grade of all the students in each course and returns a list of anonymous objects with the course name and the average grade:
+
+`var courseAvgGrades = courses
+                .Select(c => new
+                {
+                    CourseName = c.Name,
+                    AverageGrade = c.Students.Average(s => s.Grades.Average())
+                }).ToList();`
+
+
+<img src="assets/images/LINQ2.png" alt="LINQ query image 2">
+
+<br> Write a LINQ query that retrieves the names of all the courses where all the students have at least one grade greater than or equal to 80:
+
+`var coursesNames = courses
+                .Where(c => c.Students.All(s => s.Grades.Any(g => g >= 80)))
+                .Select(c => c.Name)
+                .ToList();`
+
+<img src="assets/images/LINQ3.png" alt="LINQ query image 3">
+
+<br> Write a LINQ query that retrieves the name and age of the student with the highest average grade across all the courses:
+
+`var topStudent = courses
+                .SelectMany(c => c.Students)
+                .OrderByDescending(s => s.Grades.Average())
+                .First();`
+
+
+<img src="assets/images/LINQ4.png" alt="LINQ query image 4">
 
 
 
