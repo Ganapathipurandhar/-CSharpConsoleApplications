@@ -1,5 +1,5 @@
 # C# Console Applications
-This repository showcases small C# console applications designed for beginners.
+A collection of beginner-friendly C# console applications, designed to help new developers learn and practice fundamental programming concepts.
 
 
 ## Context
