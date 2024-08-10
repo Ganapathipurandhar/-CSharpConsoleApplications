@@ -13,7 +13,7 @@ This repository showcases small C# console applications for beginners
 - [LINQ Query](#prg521_fa2_question2---linq-query)
 - [Password Generator](#prg521_fa4_passwordgenerator---password-generator)
 - [SalesTaxCalculator](#salestaxcalculator)
-- [SchoolManagementSystem](#schoolmanagementsystem)
+
 
 ## PRG521 - (Rent or Buy a Property)
 ### Overview
@@ -68,6 +68,7 @@ Calculate available monethly funds (if buying): <br>
 Take Note that validation is also built in the entire application.
 
 
+
 ## PRG521_FA2_Question1 - (City Finder)
 ### Overview
 Write a program in LINQ and C# Sharp to find the string which starts and ends with a specific character. 
@@ -79,7 +80,6 @@ Test data: Butterworth, Mthatha, Jagersfontein, Kroonstad, Boksburg, Soweto, Emp
 - Prompt the user to enter a starting character for a city 
 - Prompt the user to enter an ending string character for a city 
 - Your output should be based on the starting and ending string character
-
 
 ### Demonstrating functionality
 <img src="assets/images/CF1.png" alt="City Finder image 1">
@@ -98,7 +98,6 @@ Write a LINQ query that retrieves the names of all the students who have at leas
                 .Where(s => s.Grades.Any(g => g >= 90))
                 .Select(s => s.Name);`
 
-
 <img src="assets/images/LINQ1.png" alt="LINQ query image 1">
 
 <br> Write a LINQ query that calculates the average grade of all the students in each course and returns a list of anonymous objects with the course name and the average grade:
@@ -109,7 +108,6 @@ Write a LINQ query that retrieves the names of all the students who have at leas
                     CourseName = c.Name,
                     AverageGrade = c.Students.Average(s => s.Grades.Average())
                 }).ToList();`
-
 
 <img src="assets/images/LINQ2.png" alt="LINQ query image 2">
 
@@ -160,10 +158,8 @@ Exception handling should be used to prevent users from entering invalid input (
 <br> a. Exception handling for when a user inputs text: 
 <br> <img src="assets/images/ST1.png" alt="Sales Tax image 1">
 
-
 b. Exception handling for when the user inputs a character: 
 <br> <img src="assets/images/ST2.png" alt="Sales Tax image 2">
-
 
 All exception messages should be displayed using a message box and saved in a text file called Exceptionfile.txt
 <br> a. Additional error handling for when the user does not input any value: 
@@ -171,7 +167,6 @@ All exception messages should be displayed using a message box and saved in a te
 
 b. Additional error handling for when the user inputs a negative value: 
 <br> <img src="assets/images/ST4.png" alt="Sales Tax image 4">
-
 
 All results should be saved in a file called TaxCalculation.txt. The result should be saved once the Submit button is pressed
 <br> a. First entry: 
@@ -182,7 +177,6 @@ b. Second entry:
 
 c. Third entry: 
 <br> <img src="assets/images/ST7.png" alt="Sales Tax image 7">
-
 
 Meaning your program will have two separate text files one to record all exceptions thrown – message and the other to record all tax calculations and the date and time the operation occurred
 <br> a. ExceptionFile.txt: 
@@ -196,10 +190,3 @@ c. Additionally, the Clear button:
 
 d. The Clear button clears the Amount textbox: 
 <br> <img src="assets/images/ST11.png" alt="Sales Tax image 11">
-
-
-## SchoolManagementSystem
-### Overview
-
-### Demonstrating functionality
-
