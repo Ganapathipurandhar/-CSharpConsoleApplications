@@ -2,17 +2,98 @@
 This repository showcases small C# console applications for beginners
 
 
+
 ## Context
+
 
 
 ## Table of Contents
 - [C# Console Applications](#c-console-applications)
 - [Context](#context)
-- [Rent or Buy a Propery](#prg521---rent-or-buy-a-property)
 - [City Finder](#prg521_fa2_question1---city-finder)
-- [LINQ Query](#prg521_fa2_question2---linq-query)
 - [Password Generator](#prg521_fa4_passwordgenerator---password-generator)
+- [LINQ Query](#prg521_fa2_question2---linq-query)
+- [Rent or Buy a Propery](#prg521---rent-or-buy-a-property)
 - [SalesTaxCalculator](#salestaxcalculator)
+
+
+
+## PRG521_FA2_Question1 - (City Finder)
+### Overview
+Write a program in LINQ and C# Sharp to find the string which starts and ends with a specific character. 
+<br> Tasks to complete: 
+- You are to use an array that will contain 10 South African cities – You are required to use cities provided below: 
+Test data: Butterworth, Mthatha, Jagersfontein, Kroonstad, Boksburg, Soweto, Empangeni, Polokwane, Secunda, Kuruman. 
+- Have a welcome message to your users that will help them know your application 
+- Display all cities available 
+- Prompt the user to enter a starting character for a city 
+- Prompt the user to enter an ending string character for a city 
+- Your output should be based on the starting and ending string character
+
+### Demonstrating functionality
+<img src="assets/images/CF1.png" alt="City Finder image 1">
+
+
+
+## PRG521_FA4_PasswordGenerator - (Password Generator)
+### Overview
+A company has hired you to develop an application to generate passwords for their employees’ accounts. The application prompts the user to provide one single line of text with an employee’s full name in the following format “forename surname” at a time. (Please note that you are not required to validate the input, we assume that the input is well-formed.) Next, the application uses the given full name to create the corresponding item.  Note that the application should work irrespective of how the user provides the full name i.e. using upper-case letters, lower-case letters, or a combination of both upper-case and lower-case letters. You should use the full name as provided i.e. you should not modify the given full name to a different letter case. 
+
+The password is created using the following rules:  
+- The letters ‘a’, ’e’, and ‘t’ from the given full name will not be used in the password  
+- Each vowel (except ‘a’ and ‘e’ which are eliminated) is going to be added twice  
+- Each space is replaced by the letter ‘S’ followed by a ‘&’ and a ‘?’  
+- All the other characters will remain the same as in the given full name  
+- The password ends with the total number of letters eliminated (i.e. the total number of letters ‘a’, ’e’, and ‘t’ from the given full name that were not used in the password)  
+
+### Demonstrating functionality
+<img src="assets/images/PG1.png" alt="Password Generator image 1">
+
+
+
+## PRG521_FA2_Question2 - (LINQ Query)
+### Overview
+You have been provided with lines of codes. Answer the questions based on the line of codes. You are required to recreate it and add your line of code based on the questions below:
+
+### Demonstrating functionality
+Write a LINQ query that retrieves the names of all the students who have at least one grade greater than or equal to 90:
+
+`var studentNames = courses
+                .SelectMany(c => c.Students)
+                .Where(s => s.Grades.Any(g => g >= 90))
+                .Select(s => s.Name);`
+
+<img src="assets/images/LINQ1.png" alt="LINQ query image 1">
+
+<br> Write a LINQ query that calculates the average grade of all the students in each course and returns a list of anonymous objects with the course name and the average grade:
+
+`var courseAvgGrades = courses
+                .Select(c => new
+                {
+                    CourseName = c.Name,
+                    AverageGrade = c.Students.Average(s => s.Grades.Average())
+                }).ToList();`
+
+<img src="assets/images/LINQ2.png" alt="LINQ query image 2">
+
+<br> Write a LINQ query that retrieves the names of all the courses where all the students have at least one grade greater than or equal to 80:
+
+`var coursesNames = courses
+                .Where(c => c.Students.All(s => s.Grades.Any(g => g >= 80)))
+                .Select(c => c.Name)
+                .ToList();`
+
+<img src="assets/images/LINQ3.png" alt="LINQ query image 3">
+
+<br> Write a LINQ query that retrieves the name and age of the student with the highest average grade across all the courses:
+
+`var topStudent = courses
+                .SelectMany(c => c.Students)
+                .OrderByDescending(s => s.Grades.Average())
+                .First();`
+
+<img src="assets/images/LINQ4.png" alt="LINQ query image 4">
+
 
 
 ## PRG521 - (Rent or Buy a Property)
@@ -66,85 +147,6 @@ Calculate available monethly funds (if buying): <br>
 <img src="assets/images/RoB14.png" alt="Rent or Buy image 14">
 
 Take Note that validation is also built in the entire application.
-
-
-
-## PRG521_FA2_Question1 - (City Finder)
-### Overview
-Write a program in LINQ and C# Sharp to find the string which starts and ends with a specific character. 
-<br> Tasks to complete: 
-- You are to use an array that will contain 10 South African cities – You are required to use cities provided below: 
-Test data: Butterworth, Mthatha, Jagersfontein, Kroonstad, Boksburg, Soweto, Empangeni, Polokwane, Secunda, Kuruman. 
-- Have a welcome message to your users that will help them know your application 
-- Display all cities available 
-- Prompt the user to enter a starting character for a city 
-- Prompt the user to enter an ending string character for a city 
-- Your output should be based on the starting and ending string character
-
-### Demonstrating functionality
-<img src="assets/images/CF1.png" alt="City Finder image 1">
-
-
-
-## PRG521_FA2_Question2 - (LINQ Query)
-### Overview
-You have been provided with lines of codes. Answer the questions based on the line of codes. You are required to recreate it and add your line of code based on the questions below:
-
-### Demonstrating functionality
-Write a LINQ query that retrieves the names of all the students who have at least one grade greater than or equal to 90:
-
-`var studentNames = courses
-                .SelectMany(c => c.Students)
-                .Where(s => s.Grades.Any(g => g >= 90))
-                .Select(s => s.Name);`
-
-<img src="assets/images/LINQ1.png" alt="LINQ query image 1">
-
-<br> Write a LINQ query that calculates the average grade of all the students in each course and returns a list of anonymous objects with the course name and the average grade:
-
-`var courseAvgGrades = courses
-                .Select(c => new
-                {
-                    CourseName = c.Name,
-                    AverageGrade = c.Students.Average(s => s.Grades.Average())
-                }).ToList();`
-
-<img src="assets/images/LINQ2.png" alt="LINQ query image 2">
-
-<br> Write a LINQ query that retrieves the names of all the courses where all the students have at least one grade greater than or equal to 80:
-
-`var coursesNames = courses
-                .Where(c => c.Students.All(s => s.Grades.Any(g => g >= 80)))
-                .Select(c => c.Name)
-                .ToList();`
-
-<img src="assets/images/LINQ3.png" alt="LINQ query image 3">
-
-<br> Write a LINQ query that retrieves the name and age of the student with the highest average grade across all the courses:
-
-`var topStudent = courses
-                .SelectMany(c => c.Students)
-                .OrderByDescending(s => s.Grades.Average())
-                .First();`
-
-<img src="assets/images/LINQ4.png" alt="LINQ query image 4">
-
-
-
-## PRG521_FA4_PasswordGenerator - (Password Generator)
-### Overview
-A company has hired you to develop an application to generate passwords for their employees’ accounts. The application prompts the user to provide one single line of text with an employee’s full name in the following format “forename surname” at a time. (Please note that you are not required to validate the input, we assume that the input is well-formed.) Next, the application uses the given full name to create the corresponding item.  Note that the application should work irrespective of how the user provides the full name i.e. using upper-case letters, lower-case letters, or a combination of both upper-case and lower-case letters. You should use the full name as provided i.e. you should not modify the given full name to a different letter case. 
-
-
-The password is created using the following rules:  
-- The letters ‘a’, ’e’, and ‘t’ from the given full name will not be used in the password  
-- Each vowel (except ‘a’ and ‘e’ which are eliminated) is going to be added twice  
-- Each space is replaced by the letter ‘S’ followed by a ‘&’ and a ‘?’  
-- All the other characters will remain the same as in the given full name  
-- The password ends with the total number of letters eliminated (i.e. the total number of letters ‘a’, ’e’, and ‘t’ from the given full name that were not used in the password)  
-
-### Demonstrating functionality
-<img src="assets/images/PG1.png" alt="Password Generator image 1">
 
 
 
