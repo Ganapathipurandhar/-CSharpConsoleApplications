@@ -1,10 +1,9 @@
 # C# Console Applications
-This repository showcases small C# console applications for beginners
-
+This repository showcases small C# console applications designed for beginners.
 
 
 ## Context
-
+This repository contains a collection of simple yet functional C# console applications. These projects are aimed at helping beginners understand fundamental concepts in C# programming. Each application is self-contained and focuses on a specific task or problem, offering a practical way to apply C# skills. The applications demonstrate basic programming techniques such as string manipulation, LINQ queries, file handling, and mathematical calculations. Users can explore these projects to learn and practice C# in a console environment.
 
 
 ## Table of Contents
@@ -17,46 +16,43 @@ This repository showcases small C# console applications for beginners
 - [SalesTaxCalculator](#salestaxcalculator)
 
 
-
 ## PRG521_FA2_Question1 - (City Finder)
 ### Overview
-Write a program in LINQ and C# Sharp to find the string which starts and ends with a specific character. 
+This program uses LINQ and C# to find strings that start and end with specific characters.
+
 <br> Tasks to complete: 
-- You are to use an array that will contain 10 South African cities – You are required to use cities provided below: 
-Test data: Butterworth, Mthatha, Jagersfontein, Kroonstad, Boksburg, Soweto, Empangeni, Polokwane, Secunda, Kuruman. 
-- Have a welcome message to your users that will help them know your application 
-- Display all cities available 
-- Prompt the user to enter a starting character for a city 
-- Prompt the user to enter an ending string character for a city 
-- Your output should be based on the starting and ending string character
+- Use an array containing 10 South African cities: Butterworth, Mthatha, Jagersfontein, Kroonstad, Boksburg, Soweto, Empangeni, Polokwane, Secunda, Kuruman.
+- Display a welcome message to inform users about the application.
+- Show all available cities.
+- Prompt the user to enter a starting character for a city.
+- Prompt the user to enter an ending character for a city.
+- Display the output based on the specified starting and ending characters.
 
 ### Demonstrating functionality
 <img src="assets/images/CF1.png" alt="City Finder image 1">
 
 
-
 ## PRG521_FA4_PasswordGenerator - (Password Generator)
 ### Overview
-A company has hired you to develop an application to generate passwords for their employees’ accounts. The application prompts the user to provide one single line of text with an employee’s full name in the following format “forename surname” at a time. (Please note that you are not required to validate the input, we assume that the input is well-formed.) Next, the application uses the given full name to create the corresponding item.  Note that the application should work irrespective of how the user provides the full name i.e. using upper-case letters, lower-case letters, or a combination of both upper-case and lower-case letters. You should use the full name as provided i.e. you should not modify the given full name to a different letter case. 
+This application generates passwords based on a user's full name. The company that hired you requires the application to:
 
 The password is created using the following rules:  
-- The letters ‘a’, ’e’, and ‘t’ from the given full name will not be used in the password  
-- Each vowel (except ‘a’ and ‘e’ which are eliminated) is going to be added twice  
-- Each space is replaced by the letter ‘S’ followed by a ‘&’ and a ‘?’  
-- All the other characters will remain the same as in the given full name  
-- The password ends with the total number of letters eliminated (i.e. the total number of letters ‘a’, ’e’, and ‘t’ from the given full name that were not used in the password)  
+- Exclude the letters ‘a’, ’e’, and ‘t’ from the password.
+- Add each vowel (except ‘a’ and ‘e’) twice.
+- Replace spaces with the string 'S&?'.
+- Retain all other characters.
+- End the password with the total number of excluded letters.
 
 ### Demonstrating functionality
 <img src="assets/images/PG1.png" alt="Password Generator image 1">
 
 
-
 ## PRG521_FA2_Question2 - (LINQ Query)
 ### Overview
-You have been provided with lines of codes. Answer the questions based on the line of codes. You are required to recreate it and add your line of code based on the questions below:
+This section involves answering questions by writing LINQ queries.
 
 ### Demonstrating functionality
-Write a LINQ query that retrieves the names of all the students who have at least one grade greater than or equal to 90:
+Retrieve the names of all students with at least one grade of 90 or higher:
 
 `var studentNames = courses
                 .SelectMany(c => c.Students)
@@ -65,7 +61,7 @@ Write a LINQ query that retrieves the names of all the students who have at leas
 
 <img src="assets/images/LINQ1.png" alt="LINQ query image 1">
 
-<br> Write a LINQ query that calculates the average grade of all the students in each course and returns a list of anonymous objects with the course name and the average grade:
+<br> Calculate the average grade of all students in each course:
 
 `var courseAvgGrades = courses
                 .Select(c => new
@@ -76,7 +72,7 @@ Write a LINQ query that retrieves the names of all the students who have at leas
 
 <img src="assets/images/LINQ2.png" alt="LINQ query image 2">
 
-<br> Write a LINQ query that retrieves the names of all the courses where all the students have at least one grade greater than or equal to 80:
+<br> Retrieve the names of all courses where every student has at least one grade of 80 or higher:
 
 `var coursesNames = courses
                 .Where(c => c.Students.All(s => s.Grades.Any(g => g >= 80)))
@@ -85,7 +81,7 @@ Write a LINQ query that retrieves the names of all the students who have at leas
 
 <img src="assets/images/LINQ3.png" alt="LINQ query image 3">
 
-<br> Write a LINQ query that retrieves the name and age of the student with the highest average grade across all the courses:
+<br> Retrieve the name and age of the student with the highest average grade across all courses:
 
 `var topStudent = courses
                 .SelectMany(c => c.Students)
@@ -95,14 +91,14 @@ Write a LINQ query that retrieves the names of all the students who have at leas
 <img src="assets/images/LINQ4.png" alt="LINQ query image 4">
 
 
-
 ## PRG521 - (Rent or Buy a Property)
 ### Overview
-Rent or Buy Property Application 
- 
-You requested assistance in using an application to help a family member determine if the amount of money they are paying is sufficient to purchase a house. The family member will use the application to input their gross monthly income (before deductions), estimated monthly tax deducted, and estimated monthly expenditures in various categories. Then they can choose between renting accommodation or buying a property. If they choose to rent, they can input the monthly rental amount. If they choose to buy a property, they must enter the purchase price, total deposit, interest rate, and number of months to repay. The Application will calculate the monthly home loan repayment for buying a property and alert the user if the repayment amount is more than a third of their gross monthly income, indicating that approval of the home loan is unlikely. The Application will also calculate the available monthly money after all specified deductions.  
-- The coding standards should be internationally acceptable, and the code should include comprehensive comments explaining variable names, methods, and the logic of programming code.  
-- Submit source code and a readme file with instructions for compiling and running the software:
+This application helps a user determine whether they should rent or buy a property. The user inputs their gross monthly income, estimated tax, and monthly expenditures. They can choose to either rent or buy a property:
+
+- **Renting**: Input the monthly rental amount.
+- **Buying**: Input the purchase price, deposit, interest rate, and repayment period. The application calculates the monthly home loan repayment and checks if it exceeds one-third of the gross monthly income.
+
+The application includes internationally acceptable coding standards, with detailed comments explaining the code.
 
 ### Demonstrating functionality
 Prompt user for gross monthly income: <br>
@@ -149,11 +145,10 @@ Calculate available monethly funds (if buying): <br>
 Take Note that validation is also built in the entire application.
 
 
-
 ## SalesTaxCalculator
 
 ### Overview
-Create a Windows application that calculates sales tax for a given amount. The user can enter an amount in a text box and then can enter a sales tax between 0 and 25%, in increments of 1%. When the user clicks the Submit button, the tax is calculated, and both the tax and the total are output in a label. The application should look something like the Figure below when it runs. Display your Amounts in Rands. The amount is entered in a Textbox control, but for the tax, you want to restrict the values the user can enter, so you should use a numericUpDown control. There’s a Clear button that clears the “Amount” TextBox when clicked. Implement some exception handling to ensure that the user enters a number in the TextBox. You should include the following in your program  
+This Windows application calculates sales tax for a given amount. The user enters an amount and selects a sales tax rate between 0 and 25%. The application then calculates and displays the tax and total amount. It includes exception handling to manage invalid inputs and saves both exception messages and tax calculations to text files.
 
 ### Demonstrating functionality
 Exception handling should be used to prevent users from entering invalid input (text, character...) (try, catch, and finally)
