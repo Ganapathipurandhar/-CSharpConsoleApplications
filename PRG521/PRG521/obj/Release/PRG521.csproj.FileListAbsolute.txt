@@ -1,0 +1,7 @@
+C:\Users\puran\OneDrive\Desktop\projects\CSharpConsoleApplications\PRG521\PRG521\bin\Release\PRG521.exe.config
+C:\Users\puran\OneDrive\Desktop\projects\CSharpConsoleApplications\PRG521\PRG521\bin\Release\PRG521.exe
+C:\Users\puran\OneDrive\Desktop\projects\CSharpConsoleApplications\PRG521\PRG521\bin\Release\PRG521.pdb
+C:\Users\puran\OneDrive\Desktop\projects\CSharpConsoleApplications\PRG521\PRG521\obj\Release\PRG521.csproj.AssemblyReference.cache
+C:\Users\puran\OneDrive\Desktop\projects\CSharpConsoleApplications\PRG521\PRG521\obj\Release\PRG521.csproj.CoreCompileInputs.cache
+C:\Users\puran\OneDrive\Desktop\projects\CSharpConsoleApplications\PRG521\PRG521\obj\Release\PRG521.exe
+C:\Users\puran\OneDrive\Desktop\projects\CSharpConsoleApplications\PRG521\PRG521\obj\Release\PRG521.pdb
