@@ -48,7 +48,7 @@ pipeline {
             script {
             // Use 'dir' with correct syntax and 'findstr' for test projects
              def testProjects = bat(
-                 script: "dir /s /b C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\*.csproj | findstr /i test",
+                 script: "dir /s /b C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\PRG521\\*.csproj | findstr /i test",
                  returnStdout: true
                 ).trim().split("\n")
             
