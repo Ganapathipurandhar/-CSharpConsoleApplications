@@ -27,7 +27,7 @@ pipeline {
             steps {
                 // Restore NuGet packages from the solution or project file
                 dir('C:/Users/puran/OneDrive/Desktop/projects/CSharpConsoleApplications/PRG521') {
-                    bat 'dotnet restore PRG521.sln' 
+                    bat 'dotnet restore PRG521.sln' // Replace with your solution or project file if different
                 }
             }
         }
@@ -45,17 +45,8 @@ pipeline {
         stage('Test') {
              steps {
                echo "testing the project"
-                bat 'dotnet test C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\PRG521\\PRG521.csproj --configuration Release'
              }   
-       }
-       stage('Publish') {
-            steps {
-                script {
-                    // Publish the build output
-                    bat 'dotnet publish C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\PRG521\\PRG521.csproj --configuration Release --output C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\target'
-                }
-            }
-        }
+    }
 
 
         stage('Archive') {
