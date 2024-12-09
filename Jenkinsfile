@@ -22,7 +22,7 @@ pipeline {
             steps {
                 // Restore NuGet packages from the solution or project file
                 dir('C:/Users/puran/OneDrive/Desktop/projects/CSharpConsoleApplications/PRG521') {
-                    sh 'dotnet restore PRG521.sln' // Replace with your solution or project file if different
+                    bat 'dotnet restore PRG521.sln' // Replace with your solution or project file if different
                 }
             }
         }
@@ -30,7 +30,9 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the project
-                bat 'dotnet build --configuration Release'
+                dir('C:/Users/puran/OneDrive/Desktop/projects/CSharpConsoleApplications/PRG521') {
+                    bat 'dotnet build PRG521.sln --configuration Release' // Replace with your solution or project file if different
+                }
             }
         }
 
