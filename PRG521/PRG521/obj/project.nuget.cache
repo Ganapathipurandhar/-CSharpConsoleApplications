@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "fw4MSC+Oibg=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\PRG521\\PRG521.csproj",
+  "expectedPackageFiles": [
+    "C:\\Windows\\system32\\config\\systemprofile\\.nuget\\packages\\microsoft.net.test.sdk\\17.6.0\\microsoft.net.test.sdk.17.6.0.nupkg.sha512",
+    "C:\\Windows\\system32\\config\\systemprofile\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Windows\\system32\\config\\systemprofile\\.nuget\\packages\\nunit3testadapter\\4.0.0\\nunit3testadapter.4.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.VisualStudio.TestPlatform.TestFramework. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "Microsoft.VisualStudio.TestPlatform.TestFramework",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.0"
+      ]
+    }
+  ]
+}
