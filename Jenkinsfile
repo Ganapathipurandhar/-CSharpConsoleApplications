@@ -44,16 +44,16 @@ pipeline {
 
         stage('Test') {
             steps {
-                // Run tests (if applicable)
+                // Run tests (if the project contains tests)
                 script {
                     def testProjects = bat(
-                        script: "find . -name '*.csproj' | grep -i test",
+                        script: "dir /s /b *.csproj | findstr /i test", 
                         returnStdout: true
                     ).trim().split("\n")
-
+                    
                     if (testProjects) {
                         for (def project : testProjects) {
-                            bat "dotnet test ${project}"
+                            bat "dotnet test ${project} --no-restore --configuration Release"
                         }
                     } else {
                         echo 'No test projects found.'
