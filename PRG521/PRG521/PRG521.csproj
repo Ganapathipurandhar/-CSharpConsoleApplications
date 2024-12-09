@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>PRG521</RootNamespace>
     <AssemblyName>PRG521</AssemblyName>
-    <TargetFramework>v4.7</TargetFramework>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -56,4 +56,3 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-
