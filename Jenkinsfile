@@ -5,6 +5,11 @@ pipeline {
         msbuild 'MSBUILD'
     }
 
+    environment {
+        DOTNET_ROOT = 'C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin' // Adjust if using different Visual Studio version
+        PATH = "$DOTNET_ROOT:$PATH"
+    }
+
     stages {
        /* stage('Checkout') {
             steps {
