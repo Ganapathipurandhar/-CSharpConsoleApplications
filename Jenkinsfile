@@ -43,31 +43,27 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                // Run tests (if the project contains tests)
-                script {
-                    def testProjects = bat(
-                        script: "dir /s /b *.csproj | findstr /i test", 
-                        returnStdout: true
-                    ).trim().split("\n")
-                    
-                    if (testProjects) {
-                        for (def project : testProjects) {
-                            bat "dotnet test ${project} --no-restore --configuration Release"
-                        }
-                    } else {
-                        echo 'No test projects found.'
-                    }
-                }
+          steps {
+        // Run tests (if the project contains tests)
+            script {
+            // Use 'dir' with correct syntax and 'findstr' for test projects
+             def testProjects = bat(
+                 script: "dir /s /b C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\*.csproj | findstr /i test",
+                 returnStdout: true
+                ).trim().split("\n")
+            
+            // Check if there are any test projects and run 'dotnet test'
+              if (testProjects) {
+                  for (def project : testProjects) {
+                      bat "dotnet test \"${project}\" --no-restore --configuration Release"
+                  }
+              } else {
+                  echo 'No test projects found.'
+              }
             }
         }
+    }
 
-        stage('Package') {
-            steps {
-                // Publish the app
-                bat '"C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" /t:publish /p:Configuration=Release PRG521.sln'
-            }
-        }
 
         stage('Archive') {
             steps {
