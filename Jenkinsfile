@@ -45,8 +45,17 @@ pipeline {
         stage('Test') {
              steps {
                echo "testing the project"
+                bat 'dotnet test C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\PRG521\\PRG521.csproj --configuration Release'
              }   
-    }
+       }
+       stage('Publish') {
+            steps {
+                script {
+                    // Publish the build output
+                    bat 'dotnet publish C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\PRG521\\PRG521.csproj --configuration Release --output C:\\path\\to\\publish\\folder'
+                }
+            }
+        }
 
 
         stage('Archive') {
