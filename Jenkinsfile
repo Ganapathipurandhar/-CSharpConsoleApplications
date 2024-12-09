@@ -20,8 +20,10 @@ pipeline {
 
         stage('Restore') {
             steps {
-                // Restore NuGet packages
-                bat 'dotnet restore'
+                // Restore NuGet packages from the solution or project file
+                dir('C:/Users/puran/OneDrive/Desktop/projects/CSharpConsoleApplications/PRG521') {
+                    sh 'dotnet restore PRG521.sln' // Replace with your solution or project file if different
+                }
             }
         }
 
