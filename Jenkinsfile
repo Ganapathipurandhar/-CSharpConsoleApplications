@@ -25,34 +25,32 @@ pipeline {
 
         stage('Restore') {
             steps {
-                // Restore NuGet packages from the solution or project file
-                dir('C:/Users/puran/OneDrive/Desktop/projects/CSharpConsoleApplications/PRG521') {
-                    bat 'dotnet restore PRG521.sln' // Replace with your solution or project file if different
-                }
+                // Restore NuGet packages
+                echo "Restoring packages"
+                bat '"C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" /t:restore PRG521.sln'
             }
         }
 
         stage('Build') {
             steps {
-                // Build the project
-                dir('C:/Users/puran/OneDrive/Desktop/projects/CSharpConsoleApplications/PRG521') {
-                    bat 'dotnet build PRG521.sln --configuration Release' // Replace with your solution or project file if different
-                }
+                // Build the project using .NET Framework 4.7
+                echo "Building the project"
+                bat '"C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" /p:TargetFrameworkVersion=v4.7 PRG521.sln /p:Configuration=Release'
             }
         }
 
         stage('Test') {
             steps {
-                // Run tests (if the project contains tests)
+                // Run tests (if applicable)
                 script {
                     def testProjects = bat(
-                        script: "dir /s /b *.csproj | findstr /i test", 
+                        script: "find . -name '*.csproj' | grep -i test",
                         returnStdout: true
                     ).trim().split("\n")
-                    
+
                     if (testProjects) {
                         for (def project : testProjects) {
-                            bat "dotnet test ${project} --no-restore --configuration Release"
+                            bat "dotnet test ${project}"
                         }
                     } else {
                         echo 'No test projects found.'
@@ -64,14 +62,14 @@ pipeline {
         stage('Package') {
             steps {
                 // Publish the app
-                bat 'dotnet publish -c Release -o out'
+                bat '"C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" /t:publish /p:Configuration=Release PRG521.sln'
             }
         }
 
         stage('Archive') {
             steps {
                 // Archive the output for deployment
-                archiveArtifacts artifacts: 'out/**', fingerprint: true
+                archiveArtifacts artifacts: '**/bin/Release/*', fingerprint: true
             }
         }
 
