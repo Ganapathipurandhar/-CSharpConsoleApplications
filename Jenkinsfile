@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        DOTNET_ROOT = 'C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin' // Adjust if using different Visual Studio version
+        DOTNET_ROOT = 'C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin' // Adjust if using different Visual Studio version
         PATH = "$DOTNET_ROOT:$PATH"
     }
 
@@ -27,7 +27,7 @@ pipeline {
             steps {
                 // Restore NuGet packages from the solution or project file
                 dir('C:/Users/puran/OneDrive/Desktop/projects/CSharpConsoleApplications/PRG521') {
-                    bat 'dotnet restore PRG521.sln' // Replace with your solution or project file if different
+                    bat 'dotnet restore PRG521.sln' 
                 }
             }
         }
@@ -45,6 +45,15 @@ pipeline {
         stage('Test') {
              steps {
                echo "testing the project"
+                bat 'dotnet test C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\PRG521\\PRG521.csproj --configuration Release'
+             }   
+       }
+       stage('Publish') {
+            steps {
+                script {
+                    // Publish the build output
+                    bat 'dotnet publish C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\PRG521\\PRG521\\PRG521.csproj --configuration Release --output C:\\Users\\puran\\OneDrive\\Desktop\\projects\\CSharpConsoleApplications\\target'
+                }
              }   
     }
 
